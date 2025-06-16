@@ -1,0 +1,16 @@
+<main class="main">
+    <h1>Disciplinas</h1>
+      <hr>
+    <ul>
+  <li *ngFor = "let disciplina of disciplinas"(click)="selecionar(disciplina)">
+    <p [class.selecionado] ="selecionado==disciplina"> {{disciplina.nome}} </p>
+    <p *ngIf ="selecionado==disciplina"> {{disciplina.descricao}}</p>
+    </li>
+
+  </ul>
+</main>
+
+
+
+
+<router-outlet />
